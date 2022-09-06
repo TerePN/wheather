@@ -1,0 +1,39 @@
+body{
+  width: 100%;
+}
+
+.App{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100% ;
+  height: 100vh;
+  
+}
+.container{
+ background-color: aliceblue;
+    justify-content: center;
+    align-items: center;
+  padding: 20px 20px;
+    width: auto;
+    height: auto;
+    box-shadow: 1px 1px  10px black;
+  margin-left: 30rem;
+}
+
+button {
+  border-radius: 50%;
+  padding: 10px;
+  
+  /* margin-left: 90%; */
+  width: 240px;
+  height: 40px;
+  margin-bottom: 5px;
+  
+}
+
+.degrees{
+  background-color: blue;
+  font-size: 20px;
+  align-items: center;
+}
