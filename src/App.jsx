@@ -16,21 +16,21 @@ function App() {
       console.log(`Latitude : ${crd.latitude}`);
       console.log(`Longitude: ${crd.longitude}`);
       console.log(`More or less ${crd.accuracy} meters.`);
-      axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${crd.latitude}&lon=${crd.longitude}&appid=ca7092903f070188c5880b2509b22b31`)
+      axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${crd.latitude}&lon=${crd.longitude}&appid=29225b02ce3ad3ea35fa815979c469b8`)
         .then(res => setData(res.data))
     }
 
   }, [])
 
   let celsius = data.main?.temp - 273.15
-
+console.log(data)
   return (
     <div className="App">
 
       <div className='container'>
         <h1 className='tittle'>Weather app</h1>
         <h2 className='country'> {data.name}, {data.sys?.country} </h2>
-
+        
         <img className='img--weather' src={`http://openweathermap.org/img/wn/${data.weather?.[0].icon}.png`} alt="" />
         <h3>" {data.weather?.[0].description} "</h3> 
         <p className='temp'><i class="fa-solid fa-temperature-three-quarters"></i> Temp: {degrees ? `${celsius.toFixed(2)}°C`:`${(celsius.toFixed(1)*1.8)+32}°F`} </p>

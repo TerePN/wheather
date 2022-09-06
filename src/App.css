@@ -37,3 +37,7 @@ button {
   font-size: 20px;
   align-items: center;
 }
+
+.img--weather{
+  width: 6rem;
+}
